@@ -1,5 +1,4 @@
 import helpers as hf
-import plotly.express as px
 
 def beat_market(stock_name,length,tt,params,feature):
 
@@ -7,7 +6,7 @@ def beat_market(stock_name,length,tt,params,feature):
 
     out,p,a= hf.walking_sarimax(combo.tail(length),tt,params)
 
-    out_plot = px.line(out.set_index('date'))
+    out_plot = hf.quick_plot(out)
 
     print(f'sarimax rmse: {hf.rmse(p,a)}') #14.16 
 

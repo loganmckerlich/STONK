@@ -212,5 +212,8 @@ def run_test(info,feature):
 def rmse(p,a):
     return np.sqrt(mean_squared_error(p,a))
 
+def quick_plot(data):
+    px.line(data.set_index('date'))
+
 
 

@@ -4,7 +4,7 @@ import time
 from math import sqrt
 from multiprocessing import cpu_count
 from warnings import catch_warnings, filterwarnings
-import pandas as pd
+import yfinance as yf
 import numpy as np
  
 from joblib import Parallel, delayed
@@ -133,7 +133,6 @@ def g_test(data, n_test,seasonal,p_,d_,q_,t_,P_,D_,Q_):
 if __name__ == '__main__':
    
     # define dataset
-    import yfinance as yf
     data = np.array(yf.Ticker('PCAR').history(period='24mo')[['Close']])
     # data split
     n_test = 14
