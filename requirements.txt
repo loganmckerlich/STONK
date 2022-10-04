@@ -1,10 +1,6 @@
-pandas
-numpy
-plotly.express
-yfinance
-statsmodels.api
-pmdarima
-warnings
-sklearn.metrics
-math
-statsmodels
+helper_functions==2.0.11
+joblib==1.1.0
+numpy==1.23.2
+scikit_learn==1.1.2
+statsmodels==0.13.2
+yfinance==0.1.74
